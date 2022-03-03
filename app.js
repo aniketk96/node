@@ -6,7 +6,9 @@
 //console.log(client.usuario.user)
 
 //path module 
-const ruta=require('./modules/pathModule')
-console.log('separador:'+ruta.separador)
-console.log('ruta del archivo: '+ruta.filePath)
-console.log('nombre del archivo: '+ruta.nombreArchivo)
+//const ruta=require('./modules/pathModule')
+//console.log('separador:'+ruta.separador)
+//console.log('ruta del archivo: '+ruta.filePath)
+//console.log('nombre del archivo: '+ruta.nombreArchivo)
+
+//
