@@ -11,4 +11,7 @@
 //console.log('ruta del archivo: '+ruta.filePath)
 //console.log('nombre del archivo: '+ruta.nombreArchivo)
 
-//
+//http module
+//const server=require('./modules/htttpModule')
+//server.server.listen(5000)
+
