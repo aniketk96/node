@@ -38,3 +38,28 @@ customEmitter.on('response',()=>{
 })
 customEmitter.emit('response')*/
 
+//Express
+/*const express=require('express')
+const app=express()
+app.listen(5000)
+app.get('/info',(req,res)=>{
+    res.send("hello from express")
+})*/
+
+const {readFileSync,writeFileSync}=require('fs')
+const path=require('path')
+var name=process.argv[2]+'.txt'
+var filePath=path.join(__dirname,'content')
+var fileName=path.join(filePath,name)
+let files=new Promise((resolve,reject)=>{
+setTimeout(() => {
+writeFileSync(fileName,'holaaa desde codigo')
+resolve('ok')
+}, 5000);
+})
+.then((data)=>{
+console.log(data)
+})
+.catch((err)=>{
+console.log(err)
+})
