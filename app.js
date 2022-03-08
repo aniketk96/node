@@ -46,6 +46,8 @@ app.get('/info',(req,res)=>{
     res.send("hello from express")
 })*/
 
+//using of promises with file system 
+/*
 const {readFileSync,writeFileSync}=require('fs')
 const path=require('path')
 var name=process.argv[2]+'.txt'
@@ -62,4 +64,23 @@ console.log(data)
 })
 .catch((err)=>{
 console.log(err)
+})
+*/
+
+const express=require('express')
+const reqFilter=require('./middleware/reqFilter.js')
+const app=express()
+
+app.use(reqFilter())
+app.use('view engine','ejs')
+
+app.get('/home',reqFilter,(req,res)=>{
+    const user=[{
+        name:'aniket'
+    }]
+    res.render('home',{user})
+})
+
+app.listen(3000,()=>{
+    console.log('Server is working!')
 })
